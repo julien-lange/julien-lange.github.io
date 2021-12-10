@@ -83,8 +83,8 @@ author:
   name             : "Julien Lange"
   avatar           : "profile.png"
   bio              : "Lecturer in Computer Science"
-  location         : "London"
-  employer         : Royal Holloway, University of London
+  location         : # "London"
+  employer         : Royal Holloway
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=mpXU9XQAAAAJ"
   email            : "julien(dot)lange@rhul.ac.uk"

@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Julien Lange"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  bio              : "Lecturer in Computer Science"
   location         : "London"
   employer         : Royal Holloway, University of London
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=mpXU9XQAAAAJ"
-  email            : julien(dot)lange@rhul.ac.uk
+  email            : "julien(dot)lange@rhul.ac.uk"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :

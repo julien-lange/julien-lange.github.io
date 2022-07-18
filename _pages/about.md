@@ -24,7 +24,7 @@ distributed programs.
 Background
 ======
 Before joining the Department of Computer Science at Royal Holloway, I
-was a lecturer at The University of Kent. Before that I was a Research
+was a lecturer at the University of Kent. Before that I was a Research
 Associate at Imperial College London, in Nobuko Yoshida's group in the
 project From Data Types to Session Types -- A Basis for Concurrency
 and Distribution. I obtained my PhD from the University of Leicester

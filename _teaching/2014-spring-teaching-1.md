@@ -1,8 +1,8 @@
 ---
-title: "Teaching experience 1"
+title: "CS1811: Object Oriented 1"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/2014-spring-teaching-1
+permalink: /teaching/oop1
 venue: "University 1, Department"
 date: 2014-01-01
 location: "City, Country"

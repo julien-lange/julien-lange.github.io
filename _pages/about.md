@@ -9,7 +9,8 @@ redirect_from:
 ---
 
 
-Hello!
+I am lecturer (~assistant professor) in the Department of Computer
+Science at Royal Holloway, University of London.
 
 Research interests
 ======
@@ -31,6 +32,5 @@ under the supervision of Emilio Tuosto, while working as a Graduate
 Teaching Assistant. Before moving to Leicester, I worked for a year in
 The Netherlands at the European Space Agency in the On-board Software
 Systems section, as part of the YGT programme. I am originally from
-Belgium, where I graduated (BSc and MSc) from the University of Namur
--- Maitrise en Science Informatique, avec Grande Distinction.
+Belgium, where I graduated (BSc and MSc) from the University of Namur.
 

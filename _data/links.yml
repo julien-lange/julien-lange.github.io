@@ -1,22 +1,31 @@
-# Links shown in the "Elsewhere" section, in this order.
-# Each entry: name (label), url, and an optional note shown in grey after it.
+# Links shown in the row at the bottom of the page, in this order.
+#
+#   name: the visible label
+#   url:  where it goes
+#   icon: which icon to draw. Must match a <symbol id="i-...."> in index.html.
+#         Available: email, profile, scholar, book, orcid, code.
+#         Omit it for a label with no icon.
 
-- name: Email
+- name: julien.lange@rhul.ac.uk
   url: mailto:julien.lange@rhul.ac.uk
-  note: julien.lange@rhul.ac.uk
+  icon: email
 
-- name: Royal Holloway profile
+- name: Royal Holloway
   url: https://pure.royalholloway.ac.uk/en/persons/julien-lange/
-  note: official page
+  icon: profile
 
-- name: Google Scholar
+- name: Scholar
   url: https://scholar.google.com/citations?user=mpXU9XQAAAAJ
+  icon: scholar
 
 - name: DBLP
   url: https://dblp.org/pid/96/7159.html
+  icon: book
 
 - name: ORCID
   url: https://orcid.org/0000-0001-9697-1378
+  icon: orcid
 
 - name: GitHub
   url: https://github.com/julien-lange
+  icon: code

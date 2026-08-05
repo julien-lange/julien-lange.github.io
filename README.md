@@ -9,7 +9,7 @@ deploys it.
 | --- | --- |
 | `index.html` | The whole page: markup, prose, and the Liquid loops that render the data files. |
 | `_data/publications.yml` | **The publication list.** Edit this to add papers. |
-| `_data/links.yml` | The "Elsewhere" links. |
+| `_data/links.yml` | The links row at the bottom of the page. Each entry can name an `icon`, drawn from the SVG sprite at the top of `index.html`. |
 | `_config.yml` | Name, position, department, institution. |
 | `assets/css/style.css` | All the styling, light and dark themes. |
 | `images/profile.jpg` | The photo (square, 900×900). |

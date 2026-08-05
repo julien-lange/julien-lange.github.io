@@ -15,14 +15,18 @@
 <meta property="og:url" content="{{ site.url }}/">
 <meta property="og:image" content="{{ site.url }}{{ '/images/profile.jpg' | relative_url }}">
 <link rel="icon" href="{{ '/images/profile.jpg' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+<!-- The ?v= stamp is the stylesheet's own modification time. Without it,
+     browsers keep serving a cached copy after a redeploy and the page renders
+     with the previous version's CSS. -->
+{% assign style_file = site.static_files | where: "path", "/assets/css/style.css" | first %}
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ style_file.modified_time | date: '%s' }}">
 </head>
 <body>
 
 <!-- Icon sprite for the links row. To add an icon, add a <symbol> here
      with id="i-<name>" and set `icon: <name>` on the entry in _data/links.yml.
      Icons are drawn in the current text colour, so they follow the theme. -->
-<svg class="sprite" aria-hidden="true" focusable="false">
+<svg class="sprite" style="display:none" aria-hidden="true" focusable="false">
   <symbol id="i-email" viewBox="0 0 24 24">
     <rect x="2.5" y="5" width="19" height="14" rx="2.5"/>
     <path d="m3.5 7.5 8.5 5.5 8.5-5.5"/>
@@ -124,7 +128,11 @@
       {% for link in site.data.links %}
         <li>
           <a href="{{ link.url }}">
-            {% if link.icon %}<svg class="icon" aria-hidden="true" focusable="false"><use href="#i-{{ link.icon }}"/></svg>{% endif %}
+            <!-- The size and stroke attributes duplicate the CSS on purpose: an
+                 SVG with neither renders at its 300x150 default, filled black. -->
+            {% if link.icon %}<svg class="icon" width="16" height="16" fill="none" stroke="currentColor"
+                 stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                 aria-hidden="true" focusable="false"><use href="#i-{{ link.icon }}"/></svg>{% endif %}
             <span>{{ link.name }}</span>
           </a>
         </li>

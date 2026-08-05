@@ -1,0 +1,22 @@
+# Links shown in the "Elsewhere" section, in this order.
+# Each entry: name (label), url, and an optional note shown in grey after it.
+
+- name: Email
+  url: mailto:julien.lange@rhul.ac.uk
+  note: julien.lange@rhul.ac.uk
+
+- name: Royal Holloway profile
+  url: https://pure.royalholloway.ac.uk/en/persons/julien-lange/
+  note: official page
+
+- name: Google Scholar
+  url: https://scholar.google.com/citations?user=mpXU9XQAAAAJ
+
+- name: DBLP
+  url: https://dblp.org/pid/96/7159.html
+
+- name: ORCID
+  url: https://orcid.org/0000-0001-9697-1378
+
+- name: GitHub
+  url: https://github.com/julien-lange

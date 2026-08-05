@@ -1,0 +1,199 @@
+# Selected publications, newest first.
+#
+# To add a paper, copy a block and fill it in. Only `title`, `venue` and `year`
+# are required; every entry in `links` is optional and renders as a small link
+# next to the title.
+#
+#   - title:  Paper title (no trailing full stop)
+#     authors: Comma-separated author list, rendered verbatim.
+#     venue:  Short venue name, e.g. "POPL 2026" or "LMCS 20(4)"
+#     year:   Used for the year headings, so keep it consistent with `venue`
+#     links:  List of { name, url } pairs, e.g. DOI / arXiv / code
+#
+# Entries are grouped under year headings in the order they appear here.
+
+- title: A Modular Static Cost Analysis for GPU Warp-Level Parallelism
+  authors: Gregory Blike, Hannah Zicarelli, Udaya Sathiyamoorthy, Julien Lange, Tiago Cogumbreiro
+  venue: POPL 2026
+  year: 2026
+  links:
+    - name: DOI
+      url: https://doi.org/10.1145/3776693
+
+- title: "Welterweight Go: Boxing, Structural Subtyping, and Generics"
+  authors: Raymond Hu, Julien Lange, Bernardo Toninho, Philip Wadler, Robert Griesemer, Keith Randall
+  venue: POPL 2026
+  year: 2026
+  links:
+    - name: DOI
+      url: https://doi.org/10.1145/3776721
+    - name: arXiv
+      url: https://arxiv.org/abs/2606.27138
+
+- title: "RustMC: Automated Verification of Real-World Concurrent Rust"
+  authors: Oliver Pearce, Julien Lange, Dan O'Keeffe
+  venue: FORTE 2026
+  year: 2026
+  links:
+    - name: DOI
+      url: https://doi.org/10.1007/978-3-032-28187-6_14
+    - name: arXiv
+      url: https://arxiv.org/abs/2502.06293
+
+- title: Automated Verification of Parametric Channel-Based Process Communication
+  authors: Georgian-Vlad Saioc, Julien Lange, Anders Møller
+  venue: OOPSLA 2024
+  year: 2024
+  links:
+    - name: DOI
+      url: https://doi.org/10.1145/3689784
+
+- title: Sound and Partially-Complete Static Analysis of Data-Races in GPU Programs
+  authors: Dennis Liew, Tiago Cogumbreiro, Julien Lange
+  venue: OOPSLA 2024
+  year: 2024
+  links:
+    - name: DOI
+      url: https://doi.org/10.1145/3689797
+
+- title: Fair Asynchronous Session Subtyping
+  authors: Mario Bravetti, Julien Lange, Gianluigi Zavattaro
+  venue: LMCS 20(4)
+  year: 2024
+  links:
+    - name: DOI
+      url: https://doi.org/10.46298/lmcs-20(4:5)2024
+
+- title: "Memory Access Protocols: Certified Data-Race Freedom for GPU Kernels"
+  authors: Tiago Cogumbreiro, Julien Lange, Dennis Liew, Hannah Zicarelli
+  venue: Formal Methods in System Design 63(1)
+  year: 2024
+  links:
+    - name: DOI
+      url: https://doi.org/10.1007/s10703-023-00415-0
+
+- title: Automated Verification of Concurrent Go Programs via Bounded Model Checking
+  authors: Nicolas Dilley, Julien Lange
+  venue: Automated Software Engineering 30(1)
+  year: 2023
+  links:
+    - name: DOI
+      url: https://doi.org/10.1007/s10515-023-00391-z
+
+- title: A Model of Actors and Grey Failures
+  authors: Laura Bocchi, Julien Lange, Simon Thompson, Adriana Laura Voinea
+  venue: LMCS 19(4)
+  year: 2023
+  links:
+    - name: DOI
+      url: https://doi.org/10.46298/lmcs-19(4:13)2023
+    - name: arXiv
+      url: https://arxiv.org/abs/2210.17508
+
+- title: "kmclib: Automated Inference and Verification of Session Types from OCaml Programs"
+  authors: Keigo Imai, Julien Lange, Rumyana Neykova
+  venue: TACAS 2022
+  year: 2022
+  links:
+    - name: DOI
+      url: https://doi.org/10.1007/978-3-030-99524-9_20
+    - name: arXiv
+      url: https://arxiv.org/abs/2111.12147
+
+- title: Checking Data-Race Freedom of GPU Kernels, Compositionally
+  authors: Tiago Cogumbreiro, Julien Lange, Dennis Liew Zhen Rong, Hannah Zicarelli
+  venue: CAV 2021
+  year: 2021
+  links:
+    - name: DOI
+      url: https://doi.org/10.1007/978-3-030-81685-8_19
+
+- title: Fair Refinement for Asynchronous Session Types
+  authors: Mario Bravetti, Julien Lange, Gianluigi Zavattaro
+  venue: FoSSaCS 2021
+  year: 2021
+  links:
+    - name: DOI
+      url: https://doi.org/10.1007/978-3-030-71995-1_8
+    - name: arXiv
+      url: https://arxiv.org/abs/2101.08181
+
+- title: Automated Verification of Go Programs via Bounded Model Checking
+  authors: Nicolas Dilley, Julien Lange
+  venue: ASE 2021
+  year: 2021
+  links:
+    - name: DOI
+      url: https://doi.org/10.1109/ASE51524.2021.9678571
+
+- title: A Sound Algorithm for Asynchronous Session Subtyping and its Implementation
+  authors: Mario Bravetti, Marco Carbone, Julien Lange, Nobuko Yoshida, Gianluigi Zavattaro
+  venue: LMCS 17(1)
+  year: 2021
+  links:
+    - name: DOI
+      url: https://lmcs.episciences.org/7238
+
+- title: Featherweight Go
+  authors: Robert Griesemer, Raymond Hu, Wen Kokke, Julien Lange, Ian Lance Taylor, Bernardo Toninho, Philip Wadler, Nobuko Yoshida
+  venue: OOPSLA 2020
+  year: 2020
+  links:
+    - name: DOI
+      url: https://doi.org/10.1145/3428217
+    - name: arXiv
+      url: https://arxiv.org/abs/2005.11710
+
+- title: Verifying Asynchronous Interactions via Communicating Session Automata
+  authors: Julien Lange, Nobuko Yoshida
+  venue: CAV 2019
+  year: 2019
+  links:
+    - name: DOI
+      url: https://doi.org/10.1007/978-3-030-25540-4_6
+    - name: arXiv
+      url: https://arxiv.org/abs/1901.09606
+
+- title: A Sound Algorithm for Asynchronous Session Subtyping
+  authors: Mario Bravetti, Marco Carbone, Julien Lange, Nobuko Yoshida, Gianluigi Zavattaro
+  venue: CONCUR 2019
+  year: 2019
+  links:
+    - name: DOI
+      url: https://doi.org/10.4230/LIPIcs.CONCUR.2019.38
+    - name: arXiv
+      url: https://arxiv.org/abs/1907.00421
+
+- title: A Static Verification Framework for Message Passing in Go using Behavioural Types
+  authors: Julien Lange, Nicholas Ng, Bernardo Toninho, Nobuko Yoshida
+  venue: ICSE 2018
+  year: 2018
+  links:
+    - name: DOI
+      url: https://doi.org/10.1145/3180155.3180157
+
+- title: "Fencing off Go: Liveness and Safety for Channel-Based Programming"
+  authors: Julien Lange, Nicholas Ng, Bernardo Toninho, Nobuko Yoshida
+  venue: POPL 2017
+  year: 2017
+  links:
+    - name: DOI
+      url: https://doi.org/10.1145/3009837.3009847
+    - name: arXiv
+      url: https://arxiv.org/abs/1610.08843
+
+- title: On the Undecidability of Asynchronous Session Subtyping
+  authors: Julien Lange, Nobuko Yoshida
+  venue: FoSSaCS 2017
+  year: 2017
+  links:
+    - name: DOI
+      url: https://doi.org/10.1007/978-3-662-54458-7_26
+
+- title: From Communicating Machines to Graphical Choreographies
+  authors: Julien Lange, Emilio Tuosto, Nobuko Yoshida
+  venue: POPL 2015
+  year: 2015
+  links:
+    - name: DOI
+      url: https://doi.org/10.1145/2676726.2676964

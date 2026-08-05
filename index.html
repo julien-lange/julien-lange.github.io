@@ -1,0 +1,108 @@
+---
+---
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.title }}</title>
+<meta name="description" content="{{ site.description }}">
+<meta name="author" content="{{ site.author.name }}">
+<link rel="canonical" href="{{ site.url }}/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="{{ site.title }}">
+<meta property="og:description" content="{{ site.description }}">
+<meta property="og:url" content="{{ site.url }}/">
+<meta property="og:image" content="{{ site.url }}{{ '/images/profile.jpg' | relative_url }}">
+<link rel="icon" href="{{ '/images/profile.jpg' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+<main class="page">
+
+  <header class="intro">
+    <img class="photo" src="{{ '/images/profile.jpg' | relative_url }}"
+         alt="Photograph of {{ site.author.name }}" width="180" height="180">
+    <div class="intro-text">
+      <h1>{{ site.author.name }}</h1>
+      <p class="role">
+        {{ site.author.position }}<br>
+        <a href="{{ site.author.department_url }}">{{ site.author.department }}</a><br>
+        {{ site.author.institution }}
+      </p>
+    </div>
+  </header>
+
+  <section class="about">
+    <p>
+      I develop mathematically rigorous theories and tools that help software
+      practitioners specify, design, maintain and implement concurrent and
+      distributed programs. My work spans behavioural and session types,
+      static verification of message-passing programs in languages such as
+      Go and Rust, and the analysis of GPU kernels.
+    </p>
+    <p>
+      I am the Principal Investigator of
+      <strong>INDIMO</strong> (Invariant Discovery and Monitoring for
+      Message-Passing Programs), funded by EPSRC, 2026&ndash;2029.
+    </p>
+    <p>
+      Before Royal Holloway I was a Lecturer at the University of Kent and a
+      Research Associate at Imperial College London.
+      I hold a PhD from the University of Leicester, supervised by Emilio
+      Tuosto, and BSc and MSc degrees from the University of Namur, Belgium.
+    </p>
+  </section>
+
+  <section class="publications">
+    <h2>Selected publications</h2>
+    {% assign years = site.data.publications | group_by: "year" %}
+    {% for group in years %}
+      <div class="pub-group">
+        <h3 class="year">{{ group.name }}</h3>
+        <ul class="pub-list">
+          {% for pub in group.items %}
+            <li class="pub">
+              <span class="pub-title">{{ pub.title }}</span>
+              {% if pub.authors %}
+                <span class="pub-authors">{{ pub.authors }}</span>
+              {% endif %}
+              <span class="pub-meta">
+                <span class="venue">{{ pub.venue }}</span>
+                {% for link in pub.links %}
+                  <a class="pub-link" href="{{ link.url }}">{{ link.name }}</a>
+                {% endfor %}
+              </span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+    <p class="more">
+      Full list on
+      <a href="https://dblp.org/pid/96/7159.html">DBLP</a> and
+      <a href="https://scholar.google.com/citations?user=mpXU9XQAAAAJ">Google Scholar</a>.
+    </p>
+  </section>
+
+  <section class="links">
+    <h2>Elsewhere</h2>
+    <ul class="link-list">
+      {% for link in site.data.links %}
+        <li>
+          <a href="{{ link.url }}">{{ link.name }}</a>
+          {% if link.note %}<span class="note">{{ link.note }}</span>{% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <footer>
+    <p>{{ site.author.name }} &middot; {{ site.author.institution }} &middot; Egham, Surrey TW20 0EX, UK</p>
+  </footer>
+
+</main>
+
+</body>
+</html>

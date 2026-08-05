@@ -1,0 +1,280 @@
+/* Julien Lange — personal page.
+   One page, one stylesheet. Light and dark themes follow the OS setting. */
+
+:root {
+  --bg:        #fdfcfa;
+  --surface:   #f4f1ec;
+  --text:      #1e1c1a;
+  --muted:     #6b655e;
+  --faint:     #a09a92;
+  --rule:      #e3ded6;
+  --accent:    #2f5d8a;
+  --accent-bg: #e8eff6;
+
+  --serif: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:        #16181b;
+    --surface:   #1e2126;
+    --text:      #e6e3de;
+    --muted:     #9a948c;
+    --faint:     #6d6862;
+    --rule:      #2b2f35;
+    --accent:    #8ab4dd;
+    --accent-bg: #1d2833;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 4rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule); /* fallback where color-mix is unsupported */
+  border-bottom-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  transition: border-color .15s ease, background-color .15s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- intro ---------- */
+
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.photo {
+  width: 140px;
+  height: 140px;
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--surface);
+  box-shadow: 0 0 0 1px var(--rule), 0 6px 24px -12px rgba(0, 0, 0, .35);
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  margin: 0 0 .5rem;
+}
+
+.role {
+  margin: 0;
+  color: var(--muted);
+  font-size: .95rem;
+  line-height: 1.55;
+}
+
+.role a {
+  color: inherit;
+  border-bottom-color: var(--rule);
+}
+
+.role a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- prose ---------- */
+
+.about p {
+  margin: 0 0 1rem;
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- sections ---------- */
+
+section + section {
+  margin-top: 3.25rem;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1.5rem;
+  padding-bottom: .6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ---------- publications ---------- */
+
+.pub-group {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 0 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.year {
+  font-family: var(--serif);
+  font-size: .95rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--faint);
+  margin: .15rem 0 0;
+  text-align: right;
+}
+
+.pub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pub + .pub {
+  margin-top: 1.15rem;
+}
+
+.pub-title,
+.pub-authors,
+.pub-meta {
+  display: block;
+}
+
+.pub-title {
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.pub-authors {
+  font-size: .875rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.pub-meta {
+  margin-top: .2rem;
+  font-size: .85rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+}
+
+.venue {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--text);
+}
+
+.pub-link {
+  border: 0;
+  padding: .1rem .45rem;
+  border-radius: 4px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-size: .75rem;
+  letter-spacing: .02em;
+}
+
+.pub-link:hover {
+  background: var(--rule); /* fallback where color-mix is unsupported */
+  background: color-mix(in srgb, var(--accent) 18%, var(--accent-bg));
+}
+
+.more {
+  margin: 1.5rem 0 0;
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+/* ---------- links ---------- */
+
+.link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link-list li + li {
+  margin-top: .55rem;
+}
+
+.link-list .note {
+  color: var(--faint);
+  font-size: .85rem;
+  margin-left: .5rem;
+}
+
+/* ---------- footer ---------- */
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font-size: .8rem;
+  color: var(--faint);
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 34rem) {
+  .page {
+    padding: 2.5rem 1.25rem 3rem;
+  }
+
+  .intro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .pub-group {
+    grid-template-columns: 1fr;
+    gap: .5rem;
+  }
+
+  .year {
+    text-align: left;
+  }
+}
